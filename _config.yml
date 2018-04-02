@@ -1,0 +1,16 @@
+title: Sant’Ana Blog
+
+description: > 
+  Sant'Ana personal blog whith article about programming 
+  callengens, system adminstration and privacy on the web.
+
+baseurl: ""
+
+url: ""
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+sass:
+    sass_dir: _sass

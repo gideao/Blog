@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+  </head>
+  <body>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+		 <header class="post-header">
+		  <div class="post-title">{{ page.title }}</div>
+		  <div class="post-meta"><time datetime="{{ page.date | date_to_string }}">{{ page.date | date: "%b %-d %Y" }}</time></div>
+		</header>
+
+		<article class="post">
+		  {% if page.subtitle %}
+		  <p>{{ page.subtitle }}</p>
+		  {% endif %}
+
+		  <div class="post-content">
+		      {{ content }}
+		  </div>
+		</article>
+      </div>
+    </main>
+    {% include footer.html %}
+
+  </body>
+
+</html>
