@@ -12,18 +12,18 @@
 
 <body>
   <header class="post-header">
-    <center><div class="contact-title">{{ page.title }}</div>
-      <div class="contact-subtitle"><p>{{ page.subtitle }}</p></div></center>
-    </header>
+    <center>
+      <div class="post-title">{{ page.title }}</div>
+      <div class="post-subtitle"><p>{{ page.subtitle }}</p></div>
+    </center>
+  </header>
 
-    <div class="wrapper">
-      <div class="post-content">
-        {{ content }}
-      </div>
+  <div class="wrapper">
+    <div class="post-content">
+      {{ content }}
     </div>
+  </div>
 
-    <footer>
-      {% include footer.html %}
-    </footer>
-  </body>
-  </html>
+  {% include footer.html %}
+</body>
+</html>

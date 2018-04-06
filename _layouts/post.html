@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    {% include head.html %}
-    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
-  </head>
-  <body>
+<head>
+  {% include head.html %}
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+</head>
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-		 <header class="post-header">
-		  <div class="post-title">{{ page.title }}</div>
-		  <div class="post-meta"><time datetime="{{ page.date | date_to_string }}">{{ page.date | date: "%b %-d %Y" }}</time></div>
-		</header>
+<body>
+  <header class="post-header">
+    <center>
+    <div class="post-title">{{ page.title }}</div>
+    {% if page.subtitle %} <div class="post-subtitle"><p>{{ page.subtitle }}</p></div> {% endif %}
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_string }}">{{ page.date | date: "%b %-d %Y" }}</time>
+    </div>
+    </center>
+  </header>
 
-		<article class="post">
-		  {% if page.subtitle %}
-		  <p>{{ page.subtitle }}</p>
-		  {% endif %}
 
-		  <div class="post-content">
-		      {{ content }}
-		  </div>
-		</article>
-      </div>
-    </main>
-    {% include footer.html %}
+  <div class="wrapper">
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </div>
 
-  </body>
+{% include footer.html %}
 
+</body>
 </html>
