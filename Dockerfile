@@ -3,9 +3,12 @@ FROM ruby:2.7
 WORKDIR /app
 
 RUN apt-get update && \
-    apt-get install python3 python-pip -y
+    apt-get install unzip -y
 
-RUN pip install awscli --upgrade
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
+    unzip awscliv2.zip && \
+    sudo ./aws/install && \
+    rm -rf aws/
 
 COPY Gemfile* /app/
 
