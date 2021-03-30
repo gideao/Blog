@@ -10,6 +10,7 @@ pipeline {
       steps {
         sh 'rm -rf _posts'
         sh 'git clone https://github.com/gideao/articles.git _posts'
+        sh 'ls && pwd'
         sh 'jekyll build'
       }
     }
