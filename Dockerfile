@@ -26,7 +26,7 @@ ENV JENKINS_HOME $JENKINS_HOME
 RUN mkdir -p $JENKINS_HOME \
   && chown ${uid}:${gid} $JENKINS_HOME \
   && addgroup --gid ${gid} ${group} \
-  && adduser -h "$JENKINS_HOME" --uid ${uid} --gid ${gid} -s /bin/bash -D ${user}
+  && adduser --home "$JENKINS_HOME" --uid ${uid} --gid ${gid} --shell /bin/bash ${user}
 
 VOLUME $JENKINS_HOME
 
