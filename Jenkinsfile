@@ -11,7 +11,9 @@ pipeline {
         sh 'rm -rf _posts'
         sh 'git clone https://github.com/gideao/articles.git _posts'
         sh 'ls && pwd'
-        sh 'whoami && jekyll build'
+        sh 'echo $USER'
+        sh 'whoami'
+        sh 'jekyll build'
       }
     }
 
