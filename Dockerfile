@@ -15,6 +15,8 @@ COPY Gemfile* /app/
 RUN bundle install --system && \
     rm -rf ~/.gem /root/.bundle/cache /usr/local/bundle/cache
 
+RUN env
+
 ARG user=jenkins
 ARG group=jenkins
 ARG uid=1000
