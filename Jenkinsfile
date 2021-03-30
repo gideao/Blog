@@ -1,5 +1,9 @@
 pipeline {
-  agent { dockerfile true }
+  agent { 
+    dockerfile {
+      reuseNode true
+    }
+  }
   
   stages {
     stage('Build') {
