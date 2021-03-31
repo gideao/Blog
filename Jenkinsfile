@@ -22,7 +22,7 @@ pipeline {
       }
 
       steps {
-        sh 'aws s3 sync _site s3://www.gideao.co --delete'
+        sh 'aws s3 sync _site s3://www.gideao.co --delete --acl public-read'
       }
     }
   }
