@@ -11,6 +11,9 @@ url: ""
 exclude:
   - Gemfile
   - Gemfile.lock
+  - Jenkinsfile
+  - Rakefile
+  - Dockerfile
 
 sass:
     sass_dir: _sass
