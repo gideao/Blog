@@ -5,13 +5,22 @@
 </head>
 
 <body>
-	<main class="page-content" aria-label="Content">
-		<div class="wrapper">
-			{{ content }}
-		</div>
-	</main>
-
-	{% include footer.html %}
-
+  <div class="container is-max-widescreen">
+    <div class="tile">
+      <h1>Gide&atilde;o Santana</h1>
+    </div>
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <div class="tile is-child is-2 is-vertical">
+          {% include menu.html %}
+        </div>
+        <div class="tile is-child">          
+          <div class="content">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

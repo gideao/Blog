@@ -4,5 +4,23 @@
 
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-<link rel="stylesheet" href="{{ "/css/normalize.css" | prepend: site.baseurl }}">
-<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+<link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+
+<style type="text/css">
+	body {
+	    font-family: 'IowanOldSt BT',serif;
+	    color: $text-color;
+	    background-color: $background-color;
+	    -webkit-text-size-adjust: 100%;
+	    -webkit-font-feature-settings: "kern" 1;
+	    -moz-font-feature-settings: "kern" 1;
+	    -o-font-feature-settings: "kern" 1;
+	    font-feature-settings: "kern" 1;
+	    font-kerning: normal;
+	}
+
+	.page-title {
+		margin-top: 0
+	}
+</style>

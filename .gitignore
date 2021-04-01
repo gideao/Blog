@@ -2,6 +2,7 @@
 
 ### Jekyll ###
 _site/
+_posts/
 .sass-cache/
 .jekyll-metadata
 .jekyll-cache
