@@ -5,7 +5,8 @@ pipeline {
     stage('Build') {
       steps {
         sh 'rm -rf _posts'
-        sh 'git clone https://github.com/gideao/articles.git _posts'
+        sh 'git clone https://github.com/gideao/articles.git'
+        sh 'mv articles/posts _posts'
         sh 'jekyll build'
       }
     }
