@@ -1,37 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-  {% include head.html %}
-  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/default.min.css">
-  <script>hljs.highlightAll();</script>
-</head>
+---
+layout: default
+---
 
-<body>
-  <div class="container is-max-widescreen">
-    <div class="tile">
-      <h1>Gide&atilde;o Santana</h1>
-    </div>
-    <div class="tile is-ancestor">
-      <div class="tile is-parent">
-        <div class="tile is-child is-2 is-vertical">
-          {% include menu.html %}
-        </div>
-        <div class="tile is-child">
-            <header class="post-header">
-              <h1 class="title page-title">{{ page.title }}</h1>
-              {% if page.subtitle %} <div class="subtitle"><p>{{ page.subtitle }}</p></div> {% endif %}
-              <div class="post-meta">
-                <time datetime="{{ page.date | date_to_string }}">{{ page.date | date: "%b %-d %Y" }}</time>
-              </div>
-            </header>
-          <div class="content">
-            {{ content }}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+<section class="post">
+  <h2>{{ page.title }}</h2>
+  {{ content }}
+  <span class="meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time> &middot; {% for tag in page.tags %}
+    <a href="/tag/{{tag}}">{{tag}}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+</section>
+
+

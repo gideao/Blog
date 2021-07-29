@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-
 gem 'jekyll'
-gem 'rake'
-gem 'i18n'
+gem 'jekyll-paginate'
+gem 'jekyll-seo-tag'
+gem 'jekyll-sitemap'

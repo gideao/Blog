@@ -2,10 +2,11 @@
 layout: default
 ---
 
-<div class="content is-medium">
-	<img src="https://arthistoryproject.com/site/assets/files/27965/joseph_wright_of_derby-a_philosopher_lecturing_on_the_orrery-1766-trivium-art-history-1.800x0.jpg" class="banner" alt="" width="480px" />
+<section class="posts">
+<ul>
+{% for post in site.posts %}
+<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m-%d-%Y" }}</time></li>
+{% endfor %}
+</ul>
+</section>
 
-	<p>&#8220;People think that computer science is the art of geniuses but the actual reality is the opposite, just many people doing things that build on each other, like a wall of mini stones.&#8221;</p>
-
-	<p>- Donald Knuth</p>
-</div>

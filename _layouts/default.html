@@ -1,26 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-	{% include head.html %}
-</head>
+---
+layout: compress
+---
 
-<body>
-  <div class="container is-max-widescreen">
-    <div class="tile">
-      <h1>Gide&atilde;o Santana</h1>
-    </div>
-    <div class="tile is-ancestor">
-      <div class="tile is-parent">
-        <div class="tile is-child is-2 is-vertical">
-          {% include menu.html %}
-        </div>
-        <div class="tile is-child">          
-          <div class="content">
-            {{ content }}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
+<!DOCTYPE html>
+<html lang="en" >
+  {% include head.html %}  
+  <body>
+    <main role="main">
+	    
+	    {% include navigation.html %}
+	    
+        {{ content }}
+        	    
+    </main>
+            
+  </body>
 </html>
