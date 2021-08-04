@@ -2,8 +2,10 @@ links:
 - title: Writing
   url: /
 - title: About
-  url: /about
+  url: /about.html
+- title: Github
+  url: http://github.com/gideao
 - title: Search
-  url: /search
+  url: /search.html
 - title: Rss
   url: /atom.xml
